@@ -1,0 +1,42 @@
+.gym-card {
+  border: 1px solid lightgray;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 14px 4px lightgray;
+  padding: 10px;
+}
+
+.gym-card img {
+  width: 300px;
+  height: 100px;
+  border: 1px solid lightgray;
+}
+
+.gym-card p {
+  font-weight: 500;
+  font-size: 17px;
+}
+.gym-card article {
+  font-size: 17px;
+  color: rgb(111, 114, 116);
+}
+
+.add-tolist-btn {
+  width: 95%;
+  outline: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  background: transparent;
+  border: 2px solid #962feb;
+  font-weight:bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  display: block;
+  margin: auto;
+}
+
+.add-tolist-btn:hover {
+    background: #962feb;
+    color: white;
+}
