@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../logo.svg";
-import './cart.css'
+import "./cart.css";
 
-const Cart = () => {
+const Cart = ({ exTime, setExtime }) => {
+  const [takeBreak, setTakeBreak] = useState(0);
+
+  const breakHandler = (e) => {
+    setTakeBreak(e.target.value);
+  };
+
   return (
     <div>
       <div className="cart-container">
@@ -34,21 +40,11 @@ const Cart = () => {
 
         <h2 style={{ marginBottom: "5px", marginTop: "35px" }}>Add A Break</h2>
         <div className="break-btns">
-          <button>
-            <span>10</span>s
-          </button>
-          <button>
-            <span>20</span>s
-          </button>
-          <button>
-            <span>30</span>s
-          </button>
-          <button>
-            <span>40</span>s
-          </button>
-          <button>
-            <span>50</span>s
-          </button>
+          <input type={"button"} value={10} onClick={breakHandler} />
+          <input type={"button"} value={20} onClick={breakHandler} />
+          <input type={"button"} value={30} onClick={breakHandler} />
+          <input type={"button"} value={40} onClick={breakHandler} />
+          <input type={"button"} value={50} onClick={breakHandler} />
         </div>
 
         <h2 style={{ marginBottom: "-10px", marginTop: "35px" }}>
@@ -57,12 +53,12 @@ const Cart = () => {
         <div className="exercise">
           <div className="exercise-time">
             <p> Exercise time </p>
-            <span>200 seconds</span>
+            <span>{exTime}s</span>
           </div>
 
           <div className="break-time">
             <p> Break time </p>
-            <span>200 seconds</span>
+            <span>{takeBreak}</span>
           </div>
         </div>
         <button className="complete-btn">Activity Completed</button>

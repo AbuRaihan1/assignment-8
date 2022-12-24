@@ -28,15 +28,15 @@
   border-radius: 5px;
   background: transparent;
   border: 2px solid #962feb;
-  font-weight:bold;
+  font-weight: bold;
   font-size: 16px;
   cursor: pointer;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   display: block;
   margin: auto;
 }
 
 .add-tolist-btn:hover {
-    background: #962feb;
-    color: white;
+  background: #962feb;
+  color: white;
 }

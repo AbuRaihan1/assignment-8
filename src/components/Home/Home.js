@@ -6,6 +6,7 @@ import "./home.css";
 
 const Home = () => {
   const [gyms, setGym] = useState([]);
+  const [exTime, setExTime] = useState(0);
   useEffect(() => {
     fetch("./data.json")
       .then((res) => res.json())
@@ -23,12 +24,17 @@ const Home = () => {
       <div className="home-container">
         <div className="gym-container">
           {gyms.map((gym) => (
-            <Gym gym={gym} key={gym._id}></Gym>
+            <Gym
+              gym={gym}
+              key={gym._id}
+              exTime={exTime}
+              setExTime={setExTime}
+            ></Gym>
           ))}
         </div>
 
         <div className="cart-here">
-          <Cart></Cart>
+          <Cart exTime={exTime} setExTime={setExTime}></Cart>
         </div>
       </div>
     </div>

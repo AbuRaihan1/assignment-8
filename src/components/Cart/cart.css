@@ -23,7 +23,7 @@
 }
 
 .userBodyInfo {
-  background: rgb(241, 237, 237);
+  background: #8109e454;
 }
 
 .userBodyInfo {
@@ -39,7 +39,7 @@
   font-size: 26px;
 }
 .userBodyInfo > div > h4 small {
-  color: gray;
+  color: rgb(70, 65, 65);
   font-size: 15px;
   margin-left: 2px;
 }
@@ -47,26 +47,26 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: rgb(238, 234, 234);
+  background: #8109e454;
   border-radius: 10px;
   height: 80px;
 }
-.break-btns button {
+.break-btns input {
   background: white;
   border-radius: 50%;
   border: 1px solid #962feb;
   outline: none;
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  padding: 15px;
+  /* padding: 15px; */
   font-weight: 500;
 }
-.break-btns button:hover {
+.break-btns input:hover {
   background: #962feb;
   color: white;
 }
@@ -79,7 +79,7 @@
   align-items: center;
   padding: 10px;
   border-radius: 10px;
-  background: rgb(236, 233, 233);
+  background: #8109e454;
   margin: 20px 0;
 }
 
