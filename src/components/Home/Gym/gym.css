@@ -40,3 +40,15 @@
   background: #962feb;
   color: white;
 }
+
+.click-after-addtolist-btn {
+  background: #381058;
+  border: 2px solid transparent;
+  color: white;
+  cursor: disabled;
+}
+
+.click-after-addtolist-btn:hover{
+  background: #381058;
+  cursor: not-allowed;
+}
