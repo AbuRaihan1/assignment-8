@@ -2,11 +2,18 @@ import React, { useState } from "react";
 import logo from "../../logo.svg";
 import "./cart.css";
 
-const Cart = ({ exTime, setExtime }) => {
+const Cart = ({ exTime }) => {
   const [takeBreak, setTakeBreak] = useState(0);
 
   const breakHandler = (e) => {
     setTakeBreak(e.target.value);
+    let isItStored = localStorage.getItem("break-time");
+    let parseIsItStored = JSON.parse(isItStored);
+    if (parseIsItStored) {
+      localStorage.setItem("break-time", JSON.stringify(takeBreak));
+    } else {
+      localStorage.setItem("break-time", JSON.stringify(takeBreak));
+    }
   };
 
   return (
@@ -58,7 +65,7 @@ const Cart = ({ exTime, setExtime }) => {
 
           <div className="break-time">
             <p> Break time </p>
-            <span>{takeBreak}</span>
+            <span>{takeBreak}s</span>
           </div>
         </div>
         <button className="complete-btn">Activity Completed</button>

@@ -4,12 +4,10 @@ const Gym = ({ gym, exTime, setExTime }) => {
   const { _id, name, picture, timeRequired, about } = gym;
 
   const handleAddTolist = () => {
-    let addtoTime = timeRequired;
-    let setAddToTime = addtoTime + timeRequired;
     if (exTime) {
-      setExTime(exTime + setAddToTime);
+      setExTime(exTime + timeRequired);
     } else {
-      setExTime(addtoTime);
+      setExTime(timeRequired);
     }
   };
 
