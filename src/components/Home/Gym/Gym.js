@@ -9,17 +9,18 @@ const Gym = ({ gym, exTime, setExTime }) => {
     } else {
       setExTime(timeRequired);
     }
-    
+
     let addBtns = document.querySelectorAll(".add-tolist-btn");
-    let singleButton;
+    let x;
     for (let singleAddBtn of addBtns) {
-      singleButton = singleAddBtn;
-      singleButton.addEventListener("click", function () {
+      x = singleAddBtn;
+      singleAddBtn.addEventListener("click", function () {
         this.classList.add("click-after-addtolist-btn");
         this.setAttribute("disabled", true);
         this.textContent = "Added";
       });
     }
+    // x.style.color = "red";
   };
 
   return (

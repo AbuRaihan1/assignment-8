@@ -1,7 +1,7 @@
 /* cart container start  */
 .cart-container {
   box-shadow: 1px 1px 8px 6px lightgray;
-  border-radius: 10px 0 0 10px;
+  /* border-radius: 10px 0 0 10px; */
   padding: 10px;
   position: fixed;
   top: 0;

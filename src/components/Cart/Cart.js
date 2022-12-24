@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 import logo from "../../logo.svg";
 import "./cart.css";
 
@@ -9,7 +10,7 @@ const Cart = ({ exTime }) => {
     setTakeBreak(e.target.value);
     let isItStored = localStorage.getItem("break-time");
     let parseIsItStored = JSON.parse(isItStored);
-    
+
     if (parseIsItStored) {
       localStorage.setItem("break-time", JSON.stringify(takeBreak));
     } else {
@@ -17,12 +18,22 @@ const Cart = ({ exTime }) => {
     }
   };
 
+  const completeActivity = () => {
+    Swal.fire({
+      position: "middle",
+      icon: "success",
+      title: "wow! you've complete your activity",
+      showConfirmButton: true,
+      timer: 1500,
+    });
+  };
+
   useEffect(() => {
     let updateSetCart;
     let isItStored = localStorage.getItem("break-time");
     let parseIsItStored = JSON.parse(isItStored);
     updateSetCart = parseIsItStored;
-    setTakeBreak(updateSetCart)
+    setTakeBreak(updateSetCart);
   }, []);
 
   return (
@@ -77,7 +88,9 @@ const Cart = ({ exTime }) => {
             <span>{takeBreak}s</span>
           </div>
         </div>
-        <button className="complete-btn">Activity Completed</button>
+        <button className="complete-btn" onClick={completeActivity}>
+          Activity Completed
+        </button>
       </div>
     </div>
   );
