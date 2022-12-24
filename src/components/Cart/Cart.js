@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../logo.svg";
 import "./cart.css";
 
@@ -9,12 +9,21 @@ const Cart = ({ exTime }) => {
     setTakeBreak(e.target.value);
     let isItStored = localStorage.getItem("break-time");
     let parseIsItStored = JSON.parse(isItStored);
+    
     if (parseIsItStored) {
       localStorage.setItem("break-time", JSON.stringify(takeBreak));
     } else {
       localStorage.setItem("break-time", JSON.stringify(takeBreak));
     }
   };
+
+  useEffect(() => {
+    let updateSetCart;
+    let isItStored = localStorage.getItem("break-time");
+    let parseIsItStored = JSON.parse(isItStored);
+    updateSetCart = parseIsItStored;
+    setTakeBreak(updateSetCart)
+  }, []);
 
   return (
     <div>

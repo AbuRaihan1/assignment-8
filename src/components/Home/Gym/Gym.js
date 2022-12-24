@@ -1,7 +1,7 @@
 import React from "react";
 import "./gym.css";
 const Gym = ({ gym, exTime, setExTime }) => {
-  const { _id, name, picture, timeRequired, about } = gym;
+  const { name, picture, timeRequired, about } = gym;
 
   const handleAddTolist = () => {
     if (exTime) {
